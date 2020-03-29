@@ -1,0 +1,36 @@
+{
+  "name": "expense-chart-generator",
+  "version": "0.0.1",
+  "description": "Generates markdown charts for import into a cwiki",
+  "main": "index.js",
+  "repository": "git@github.com:mvlasaty23/expense-chart-generator.git",
+  "author": "Michael Vlasaty <mvlasaty23@gmail.com>",
+  "license": "SEE LICENSE FILE",
+  "private": true,
+  "scripts": {
+    "build": "yarn run lint && yarn run ts-build",
+    "ts-build": "tsc",
+    "ts-watch": "tsc -w",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint-fix": "prettier src/**/*.{ts,js,css,scss,less,md,html} --write && tslint -c tslint.json 'src/**/*.ts' --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "prettier": "^2.0.2",
+    "ts-node": "^8.8.1",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "rxjs": "^6.5.4"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
